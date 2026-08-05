@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Instrument_Serif } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 import AppProviders from '@/components/AppProviders';
 import './globals.css';
 
@@ -33,6 +34,7 @@ export default function RootLayout({
     <html lang="en" className={`${geist.variable} ${geistMono.variable} ${instrument.variable}`}>
       <body>
         <AppProviders>{children}</AppProviders>
+        <Analytics />
       </body>
     </html>
   );
